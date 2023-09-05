@@ -16,10 +16,9 @@ function App({ data }) {
   // const [dispHeader, setDispHeader] = useState(true);
 
   useEffect(() => {
-
     // Esegui le modifiche desiderate qui quando il percorso cambia
     // console.log('Il percorso è cambiato:', location.pathname);
-    
+
     // if url contains recruitment, render recruitment router
     // if (location.pathname === '/') {
     //   setDispHeader(false);
