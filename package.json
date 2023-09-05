@@ -33,7 +33,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "react-scripts build && echo '/* /index.html 200' | cat >build/_redirects",
     "start": "next start",
     "lint": "next lint"
   },
