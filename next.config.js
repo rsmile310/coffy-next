@@ -7,7 +7,7 @@ const nextConfig = {
     path: "",
     unoptimized: true,
   },
-  NETLIFY_NEXT_PLUGIN_SKIP: true,
+  // NETLIFY_NEXT_PLUGIN_SKIP: true,
   assetPrefix: "",
   compiler: {
     styledComponents: true,
