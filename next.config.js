@@ -1,4 +1,7 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  target: "serverless",
   exportPathMap: async function (
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
@@ -13,13 +16,15 @@ const nextConfig = {
   },
   images: {
     domains: ["*"],
-    loader: "default",
+    loader: "akamai",
+    path: "",
+    unoptimized: true,
   },
+  NETLIFY_NEXT_PLUGIN_SKIP: true,
   assetPrefix: "",
   compiler: {
     styledComponents: true,
   },
-  target: "serverless",
 };
 
 module.exports = nextConfig;
