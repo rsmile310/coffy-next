@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   exportPathMap: async function (
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
@@ -12,7 +13,6 @@ const nextConfig = {
       },
     }
   },
-  output: "export",
   images: {
     domains: ["*"],
     loader: "akamai",
