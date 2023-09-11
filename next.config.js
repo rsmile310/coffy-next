@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: process.env.NODE_ENV === 'production' ? '/qrscanner/anytoken' : '',
+  basePath: process.env.NODE_ENV === 'production' ? 'https://cozy-gingersnap-d3694b.netlify.app' : 'localhost:3000',
   output: "export",
   images: {
     domains: ["*"],
