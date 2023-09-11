@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: process.env.NODE_ENV === 'production' ? '/qrscanner/anytoken' : '',
   output: "export",
   images: {
     domains: ["*"],
