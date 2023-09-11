@@ -1,6 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  target: 'server',
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      "/": { page: "/" },
+      "/qrscanner/anytoken": {
+        page: "/posts/[slug]",
+        query: { slug: "anytoken" }
+      },
+    }
+  },
   output: "export",
   images: {
     domains: ["*"],
