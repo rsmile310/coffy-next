@@ -10,6 +10,7 @@ const nextConfig = {
         page: "/qrscanner/[slug]",
         query: { slug: "anytoken" }
       },
+      ...defaultPathMap,
     }
   },
   images: {
