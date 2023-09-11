@@ -3,7 +3,7 @@ const nextConfig = {
   exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
     return {
       ...defaultPathMap,
-      '/qrscanner/anytoken': { page: '/qrscanner/[slug]', query: { slug: 'anytoken' } },
+      '/qrscanner/anytoken': { page: '/qrscanner/[scannerToken]', query: { scannerToken: 'anytoken' } },
     }
   },
   images: {
