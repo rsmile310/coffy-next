@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: process.env.NODE_ENV === 'production' ? 'https://cozy-gingersnap-d3694b.netlify.app' : 'https://localhost:3000',
   output: "export",
   images: {
     domains: ["*"],
