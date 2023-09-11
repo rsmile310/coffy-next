@@ -7,7 +7,7 @@ const nextConfig = {
     return {
       "/": { page: "/" },
       "/qrscanner/anytoken": {
-        page: "/posts/[slug]",
+        page: "/qrscanner/[slug]",
         query: { slug: "anytoken" }
       },
     }
