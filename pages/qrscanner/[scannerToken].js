@@ -69,7 +69,7 @@ const QRScanner = () => {
       console.log("QR data not available!");
       return;
     }
-  
+
     try {
       const qrData = JSON.parse(qrCode);
       console.log(qrData);
@@ -79,7 +79,7 @@ const QRScanner = () => {
         setPopupMessage(false);
         return;
       }
-    
+
       if (!qrData.user_id || !qrData.event_id || !qrData.token) {
         console.log("Invalid QR data!");
         setPopupMessage(false);
@@ -110,21 +110,21 @@ const QRScanner = () => {
   }
 
   useEffect(() => {
-      console.log("popupMessage ha cambiato valore:", popupMessage);
-      setQRCode(null);
+    console.log("popupMessage ha cambiato valore:", popupMessage);
+    setQRCode(null);
   }, [popupMessage]);
 
   return (
     <StyledScanner>
-      {!showCamera && ( 
-      <div className='initial-div'>
-        <Logo src={logo} alt="logo" />
-        <h1>Ticket scanner</h1>
-        <p>Tap here to stamp the ticket</p>
-        <button onClick={() => setShowCamera(true)}>
-          Scan ticket
-        </button>
-      </div>
+      {!showCamera && (
+        <div className='initial-div'>
+          <Logo src={logo} alt="logo" />
+          <h1>Ticket scanner</h1>
+          <p>Tap here to stamp the ticket</p>
+          <button onClick={() => setShowCamera(true)}>
+            Scan ticket
+          </button>
+        </div>
       )}
       {showCamera && (
         <div className='camera-div'>
@@ -134,39 +134,39 @@ const QRScanner = () => {
             ref={webcamRef}
             screenshotFormat="image/jpeg"
             videoConstraints={videoConstraints}
-            className="webcam-style" 
+            className="webcam-style"
           />
           <div className='backgorund-scanner'>
             <Logo className='logo' src={logo2} alt="logo" />
-              {popupMessage === null && 
+            {popupMessage === null &&
               <div className='response'> <p>Place the ticket inside the box</p></div>}
-              {popupMessage !== null && popupMessage === true && <div className='response valid-ticket'> 
-                <div className='valid-res'>
-                  <p>Ticekt valid</p>
-                </div>
-                <p>Ticket has been stamped</p>
-              </div>}
-              {popupMessage !== null && popupMessage === false && <div className='response invalid-ticket'>
-                <div className='invalid-res'>
-                  <p>Error</p>
-                </div>
-                <p>Ticket not valid, try again</p>
-              </div>}
+            {popupMessage !== null && popupMessage === true && <div className='response valid-ticket'>
+              <div className='valid-res'>
+                <p>Ticekt valid</p>
+              </div>
+              <p>Ticket has been stamped</p>
+            </div>}
+            {popupMessage !== null && popupMessage === false && <div className='response invalid-ticket'>
+              <div className='invalid-res'>
+                <p>Error</p>
+              </div>
+              <p>Ticket not valid, try again</p>
+            </div>}
             <div className='qr-space'>
-              <ScannerSpace className="scanner-image" src={popupMessage === null ? scannerImage : (popupMessage !== null && popupMessage === true) ? scannerImage2 : scannerImage3}  />
+              <ScannerSpace className="scanner-image" src={popupMessage === null ? scannerImage : (popupMessage !== null && popupMessage === true) ? scannerImage2 : scannerImage3} />
             </div>
-            {popupMessage === null && qrCode && <div className='action-buttons'> 
+            {popupMessage === null && qrCode && <div className='action-buttons'>
               <button onClick={handleAccessRegistration}>
                 Validate ticket
               </button>
               <button onClick={handleReset}
-              style={{backgroundColor:"red"}}>
+                style={{ backgroundColor: "red" }}>
                 Cancella
               </button>
             </div>}
             {popupMessage !== null && <button onClick={handleReset}>
-                Next ticket
-            </button> }
+              Next ticket
+            </button>}
           </div>
         </div>
       )}
@@ -369,7 +369,7 @@ const ScannerSpace = styled.img`
   height: 300px;
 `;
 
-  // create logo styled component
+// create logo styled component
 const Logo = styled.img`
 height: 200px;
 
