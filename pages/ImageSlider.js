@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
-const firstImage = "/assets/Feed.jpg";
 const secondImage = "/assets/Event.jpg";
 const thirdImage = "/assets/Create.jpg";
 const fourthImage = "/assets/Profile.jpg";

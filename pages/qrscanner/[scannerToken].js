@@ -21,7 +21,7 @@ const QRScanner = ({ scannerToken }) => {
   const [showCamera, setShowCamera] = useState(false);
   const [popupMessage, setPopupMessage] = useState(null);
   const router = useRouter();
-  const { scannerToken } = router.query;
+  // const { scannerToken } = router.query;
 
   useEffect(() => {
     if (!showCamera) return;
