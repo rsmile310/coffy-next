@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  target: 'server',
+  target: 'static',
   output: "export",
   images: {
     domains: ["*"],
